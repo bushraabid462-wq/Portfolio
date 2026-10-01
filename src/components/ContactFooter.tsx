@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, ArrowUpRight, Heart } from 'lucide-react';
+import { Mail, Phone, ArrowUpRight, Heart, Github } from 'lucide-react';
 import { PORTFOLIO_CONTENT } from '@/data/content';
 
 const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -21,7 +21,7 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function ContactFooter() {
-  const { name, email, phone, linkedin } = PORTFOLIO_CONTENT.personal;
+  const { name, email, phone, linkedin, github } = PORTFOLIO_CONTENT.personal;
 
   return (
     <footer id="contact" className="pt-20 pb-12 px-6 md:px-12 max-w-7xl mx-auto w-full">
@@ -77,6 +77,19 @@ export default function ContactFooter() {
               <span>LinkedIn</span>
               <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
             </a>
+
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card px-5 py-2.5 rounded-full flex items-center gap-2.5 text-xs font-semibold text-[#0F1B2D] hover:bg-white transition-all shadow-xs"
+              >
+                <Github className="w-4 h-4 text-[#3D6A96]" />
+                <span>GitHub Repo</span>
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+              </a>
+            )}
 
             <a
               href={`tel:${phone}`}

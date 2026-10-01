@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight, Mail, Phone } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Mail, Phone, Github } from 'lucide-react';
 import { PORTFOLIO_CONTENT } from '@/data/content';
 
 const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -75,6 +75,19 @@ export default function Navbar() {
                 </button>
               ))}
             </nav>
+
+            {PORTFOLIO_CONTENT.personal.github && (
+              <a
+                href={PORTFOLIO_CONTENT.personal.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Repository"
+                className="w-12 h-12 rounded-full bg-white/90 shadow-md border border-white/80 flex items-center justify-center text-[#0F1B2D] hover:bg-[#0F1B2D] hover:text-white transition-all duration-300 active:scale-95 group"
+                title="View GitHub Repository"
+              >
+                <Github className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+              </a>
+            )}
 
             {/* Circular Hamburger Button */}
             <button
@@ -179,6 +192,18 @@ export default function Navbar() {
                       <span>LinkedIn Profile</span>
                       <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
                     </a>
+                    {PORTFOLIO_CONTENT.personal.github && (
+                      <a
+                        href={PORTFOLIO_CONTENT.personal.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-sm text-gray-200 hover:text-white transition-colors"
+                      >
+                        <Github className="w-4 h-4 text-[#7FA3C7]" />
+                        <span>GitHub Repository</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+                      </a>
+                    )}
                   </div>
 
                   <a

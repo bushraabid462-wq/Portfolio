@@ -66,6 +66,7 @@ export const PORTFOLIO_CONTENT = {
     email: "nabihaabid1000@gmail.com",
     phone: "+923194203661",
     linkedin: "https://www.linkedin.com/in/nabiha-abid-29578a20b",
+    github: "https://github.com/bushraabid462-wq/Portfolio",
     location: "Remote",
     upworkProof: "Trusted by clients on Upwork & across freelance projects."
   },
